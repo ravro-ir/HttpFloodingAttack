@@ -13,9 +13,9 @@ public class ConfigAsync {
     public TaskExecutor dbTasks() {
 
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(2);
-        executor.setMaxPoolSize(2);
-        executor.setQueueCapacity(2);
+        executor.setCorePoolSize(80);
+        executor.setMaxPoolSize(80);
+        executor.setQueueCapacity(80);
         executor.setThreadNamePrefix("request-");
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         executor.initialize();
